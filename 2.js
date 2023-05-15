@@ -43,3 +43,20 @@ const students = [
   
     }
   ];
+  const threshold = 85
+const topStudents = findTopStudents(students, threshold);
+console.log(topStudents);
+
+function findTopStudents(students, threshold) {
+  const topStudents = [];
+
+  for (const student of students) {
+    const averageGrade = student.grades.reduce((sum, grade) => sum + grade, 0) / student.grades.length;
+
+    if (averageGrade > threshold) {
+      topStudents.push(student);
+    }
+  }
+
+  return topStudents;
+}
