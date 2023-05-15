@@ -31,10 +31,23 @@ let students = [
     {name : 'Mohan' , age :19 , grades : [96], hobbies : ['coding']},
     ]
     
-    function findTopStudents(arr, marks){
-        let toppers = arr.filter(student => student.grades >= marks)
+    // function findTopStudents(arr, marks){
+    //     let toppers = arr.filter(student => student.grades >= marks)
         
-        return toppers
+    //     return toppers
+    //   }
+    //   console.log(findTopStudents(students, 85))
+   
+   
+    function addHobby(arr, name, hobby){
+    
+        arr.forEach(student => {
+          if(student.name === name){
+            student.hobbies.push(hobby)
+          }
+        })
+        return arr
       }
-      console.log(findTopStudents(students, 85))
+      console.log(addHobby(students,"Sanvi", "bike-riding"))
+       console.log(addHobby(students,"Mohan", "books-reading"))
       
