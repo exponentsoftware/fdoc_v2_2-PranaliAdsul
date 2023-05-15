@@ -31,3 +31,10 @@ let students = [
     {name : 'Mohan' , age :19 , grades : [96], hobbies : ['coding']},
     ]
     
+    function findTopStudents(arr, marks){
+        let toppers = arr.filter(student => student.grades >= marks)
+        
+        return toppers
+      }
+      console.log(findTopStudents(students, 85))
+      
